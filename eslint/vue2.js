@@ -35,6 +35,8 @@ module.exports = {
 
   // vue 规则
   rules: {
+    // 组件名称
+    'vue/multi-word-component-names': 'off',
     // 使用 === 而不是 ==
     'vue/eqeqeq': ['error', 'always'],
     // 使用模板字面量而非字符串连接
