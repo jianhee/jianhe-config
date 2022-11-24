@@ -1,8 +1,7 @@
 /**
- * StyleLint Config For CSS
- * 适用于 CSS 的配置
+ * StyleLint Config For CSS + HTML/Vue
  *
- * 安装
+ * 安装 Standard 配置
  * npm install -D stylelint-config-standard
  *
  * 文档
@@ -12,9 +11,9 @@
 module.exports = {
   // 可共享配置
   extends: [
-    // standard 配置
+    // Standard 配置
     'stylelint-config-standard',
-    // 自定义的基础配置
+    // 本地配置
     './_base.js'
   ]
 };

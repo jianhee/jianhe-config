@@ -1,7 +1,7 @@
-# Editor Config
+# EditorConfig
 # https://editorconfig.org/
 
-# 是否顶级目录
+# 是否是顶级目录
 root = true
 
 # 匹配的文件类型
