@@ -11,9 +11,9 @@
 module.exports = {
   // 每行最大字符数
   printWidth: Infinity,
-  // 每个缩进使用的空格数
+  // 制表符宽度
   tabWidth: 2,
-  // 是否使用缩进符（否则使用空格）
+  // 是否使用制表符缩进（否则使用空格）
   useTabs: false,
   // 是否在语句末尾使用分号
   semi: true,
@@ -44,13 +44,13 @@ module.exports = {
   htmlWhitespaceSensitivity: 'css',
   // Vue 的 <script> 和 <style> 标签是否缩进
   vueIndentScriptAndStyle: false,
-  // 换行风格
+  // 换行方式
   endOfLine: 'lf',
   // 识别并格式化内嵌代码：自动
   embeddedLanguageFormatting: 'auto',
   // 是否给属性换行
   singleAttributePerLine: false,
-  // 指定文件类型
+  // 为指定的文件类型重写配置
   overrides: [
     // CSS 相关
     {
