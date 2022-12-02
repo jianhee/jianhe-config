@@ -40,7 +40,7 @@ module.exports = {
   insertPragma: false,
   // Markdown 的折行标准：使用默认标准
   proseWrap: 'preserve',
-  // HTML 的空格格式：可选的值有 `css`（根据显示样式）、`strict`（保留空格）、`ignore`（忽略空格）
+  // HTML 的空格格式：可选的值有 1.'css'（根据显示样式）2.'strict'（保留空格）3.'ignore'（忽略空格）
   htmlWhitespaceSensitivity: 'css',
   // Vue 的 <script> 和 <style> 标签是否缩进
   vueIndentScriptAndStyle: false,

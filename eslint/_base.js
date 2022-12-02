@@ -43,7 +43,7 @@ module.exports = {
   // 默认为空，添加可共享配置可以继承另一个配置文件的所有特征（包括规则、插件和语言选项）并修改所有选项
   // 可选的值有以下三种，数组中后一项的优先级大于前一项，后一项的规则会覆盖前一项
   extends: [
-    // 1.官方配置的名称：可选的值有 `recommended`（推荐规则）、`all`（全部规则）
+    // 1.官方配置的名称：可选的值有 1.'recommended'（推荐规则）2.'all'（全部规则）
     'eslint:recommended',
     // 2.第三方配置的名称
     'standard'
@@ -52,14 +52,14 @@ module.exports = {
   ],
 
   // 解析器
-  // 默认为 `Espree`，添加第三方解析器可以解析特定的语法，同时需要配置 `parserOptions` 字段
+  // 默认为 'Espree'，添加第三方解析器可以解析特定的语法，同时需要配置 `parserOptions` 字段
   parser: '',
 
   // 解析器选项
   parserOptions: {
-    // ECMAScript 版本：可选的值有 `3,5`（默认）、一个版本、一个年份
+    // ECMAScript 版本：默认为 '3,5'，可设置为一个版本或一个年份
     ecmaVersion: 2022,
-    // ECMAScript 模式：可选的值有 `script`（默认）、`module`（如果代码是 ECMAScript 模块）
+    // ECMAScript 模式：可选的值有 1.'script'（默认）2.'module'（如果代码是 ECMAScript 模块）
     sourceType: 'module',
     // 额外的语言特性：默认都是关闭的
     ecmaFeatures: {
@@ -87,9 +87,9 @@ module.exports = {
 
   // 启用或覆盖的规则及其各自的错误级别
   // 默认所有规则都是禁用的，添加的规则可以设置为以下三种值
-  // 0/`off`    关闭规则
-  // 1/`warn`   启用并警告，不会导致程序退出
-  // 2/`error`  启用并报错，触发时会导致程序退出
+  // 0/'off'    关闭规则
+  // 1/'warn'   启用并警告，不会导致程序退出
+  // 2/'error'  启用并报错，触发时会导致程序退出
   rules: {
     // 风格相关
     // 对象属性的引号：如果有一个属性需要使用引号，那就全部都使用引号

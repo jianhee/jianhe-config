@@ -15,7 +15,7 @@
 module.exports = {
   // Vue 插件
   // 1.它可以从 .vue 文件的 <script> 标签和 <template> 标签中提取代码，并针对 Vue 语法提供了更多的规则
-  // 2.它和 HTML 插件都会从 <script> 标签中提取代码，所以需要在 `plugins` 字段中移除 `html` 以避免两个插件产生冲突
+  // 2.它和 HTML 插件都会从 <script> 标签中提取代码，所以需要在 `plugins` 字段中移除 'html' 以避免两个插件产生冲突
   plugins: ['vue'],
 
   // Vue 插件提供的解析器
