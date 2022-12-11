@@ -72,6 +72,8 @@ npm install stylelint stylelint-config-html postcss-html stylelint-config-recess
 npm install stylelint stylelint-config-html postcss-html stylelint-config-recess-order stylelint-config-standard-scss
 ```
 
+添加配置
+
 ```js
 module.exports = {
   // CSS
