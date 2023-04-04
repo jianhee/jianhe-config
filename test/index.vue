@@ -58,7 +58,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 a {
   margin: 0 auto;
   color: #fff;
