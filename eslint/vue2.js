@@ -38,14 +38,15 @@ module.exports = {
 
   // Vue 插件提供的规则
   rules: {
-    // 组件名称
+    // 目录和文件名：必须使用 kebab-case 写法
+    // 组件的命名：必须使用两个以上的单词
     'vue/multi-word-component-names': 'off',
+    // 组件名称的写法：在单文件组件和字符串模板中使用 PascalCase 写法，在 DOM 模板中使用 kebab-case 写法
+    'vue/component-name-in-template-casing': ['error', 'PascalCase'],
     // 使用 === 而不是 ==
     'vue/eqeqeq': ['error', 'always'],
     // 使用模板字面量而非字符串连接
     'vue/prefer-template': 'error',
-    // 组件名称在模板中的样式：使用中划线写法
-    'vue/component-name-in-template-casing': ['error', 'kebab-case'],
     // HTML 元素中的内容是否换行：多行时换行，单行时关闭校验
     'vue/multiline-html-element-content-newline': 'error',
     'vue/singleline-html-element-content-newline': 'off'
