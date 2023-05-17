@@ -1,6 +1,6 @@
 export default {
   a: 1,
-  b: function () {
+  b: function() {
     console.log(1);
   }
 };
