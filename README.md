@@ -44,7 +44,7 @@ module.exports = require('./node_modules/@jianhe/config/prettier/index.js');
 # ES6 + Standard + Babel + HTML
 npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise @babel/eslint-parser @babel/core eslint-plugin-html
 
-# ES6 + Standard + Babel + Vue2
+# ES6 + Standard + Babel + Vue2/Vue3
 npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise @babel/eslint-parser @babel/core eslint-plugin-vue
 ```
 
@@ -57,6 +57,9 @@ module.exports = {
 
   // Vue2
   extends: ['./node_modules/@jianhe/config/eslint/vue2.js']
+
+  // Vue3
+  extends: ['./node_modules/@jianhe/config/eslint/vue3.js']
 };
 ```
 

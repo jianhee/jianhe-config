@@ -58,7 +58,7 @@ module.exports = {
   // 解析器选项
   parserOptions: {
     // ECMAScript 版本：默认为 '3,5'，可设置为一个版本或一个年份
-    ecmaVersion: 2022,
+    ecmaVersion: 'latest',
     // ECMAScript 模式：可选的值有 1.'script'（默认）2.'module'（如果代码是 ECMAScript 模块）
     sourceType: 'module',
     // 额外的语言特性：默认都是关闭的
