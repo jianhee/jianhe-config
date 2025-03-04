@@ -37,7 +37,7 @@ npm install -D prettier
 
 ```json
 {
-  "prettier": "@jianhe/configs/prettier/index.js"
+  "prettier": "./node_moules/@jianhe/configs/prettier/index.js"
 }
 ```
 
@@ -49,7 +49,7 @@ npm install -D prettier
 7. `.prettierrc.toml`
 
 ```js
-module.exports = require('@jianhe/configs/prettier/index.js');
+module.exports = require('./node_moules/@jianhe/configs/prettier/index.js');
 ```
 
 ## ESlint
@@ -64,29 +64,25 @@ npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-
 npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise @babel/eslint-parser @babel/core eslint-plugin-vue
 ```
 
-配置文件优先级v9
+配置文件优先级
 
-1. `eslint.config.js`, `eslint.config.mjs`, `eslint.config.cjs`
-2. `eslint.config.ts`, `eslint.config.mts`, `eslint.config.cts`
-3. `.eslintrc.js`, `.eslintrc.mjs`, `.eslintrc.cjs`
+1. `.eslintrc.js`, `.eslintrc.cjs`
 
 ```js
 module.exports = {
-  extends: ['@jianhe/configs/eslint/html|vue2|vu3.js']
+  extends: ['./node_moules/@jianhe/configs/eslint/html|vue2|vue3.js']
 };
 ```
 
-以下配置已经被弃用
-
-4. `.eslintrc.js`, `.eslintrc.cjs`
-5. `.eslintrc.yaml`, `.eslintrc.yml`
-6. `.eslintrc.json`
-7. `package.json` 的 `eslintConfig` 字段
+2. `.eslintrc.js`, `.eslintrc.cjs`
+3. `.eslintrc.yaml`, `.eslintrc.yml`
+4. `.eslintrc.json`
+5. `package.json` 的 `eslintConfig` 字段
 
 ```json
 {
   "eslintConfig": {
-    "extends": ["@jianhe/configs/eslint/html|vue2|vu3.js"]
+    "extends": ["./node_moules/@jianhe/configs/eslint/html|vue2|vue3.js"]
   }
 }
 ```
@@ -109,7 +105,7 @@ npm install stylelint stylelint-config-html postcss-html stylelint-config-recess
 
 ```js
 module.exports = {
-  extends: ['@jianhe/configs/stylelint/css|scss.js']
+  extends: ['./node_moules/@jianhe/configs/stylelint/css|scss.js']
 };
 ```
 
@@ -124,7 +120,7 @@ module.exports = {
 ```json
 {
   "stylelint": {
-    "extends": ["@jianhe/configs/stylelint/css|scss.js"]
+    "extends": ["./node_moules/@jianhe/configs/stylelint/css|scss.js"]
   }
 }
 ```
