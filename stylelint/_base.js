@@ -18,6 +18,9 @@
  */
 
 module.exports = {
+  // 添加文件忽略配置（重要优化点）
+  ignoreFiles: ['**/node_modules', '**/dist', '**/public', '**/*.min.css'],
+
   // 插件
   plugins: [],
 
@@ -41,5 +44,9 @@ module.exports = {
     'font-family-no-missing-generic-family-keyword': null,
     // 是否允许特异性较低的选择器在特异性较高的选择器之后出现：不校验
     'no-descending-specificity': null
-  }
+  },
+
+  // 新增缓存配置（显著提升速度）
+  cache: true,
+  cacheLocation: 'node_modules/.cache/stylelint/'
 };
