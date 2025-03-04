@@ -12,7 +12,7 @@ yalc publish --push
 在目标项目根目录下运行，通过全局软链获取到自定义配置
 
 ```shell
-yalc add @jianhe/config
+yalc add @jianhe/configs
 ```
 
 ## VS Code
@@ -31,10 +31,25 @@ yalc add @jianhe/config
 npm install -D prettier
 ```
 
-添加配置
+配置文件优先级
+
+1. `package.json` 的 `prettier` 字段
+
+```json
+{
+  "prettier": "@jianhe/configs/prettier/index.js"
+}
+```
+
+2. `.prettierrc`
+3. `.prettierrc.json`, `.prettierrc.yml`, `.prettierrc.yaml`, or `.prettierrc.json5`
+4. `.prettierrc.js`, `prettier.config.js`, `.prettierrc.ts`, or `prettier.config.ts`
+5. `.prettierrc.mjs`, `prettier.config.mjs`, `.prettierrc.mts`, or `prettier.config.mts`
+6. `.prettierrc.cjs`, `prettier.config.cjs`, `.prettierrc.cts`, or `prettier.config.cts`
+7. `.prettierrc.toml`
 
 ```js
-module.exports = require('@jianhe/config/prettier/index.js');
+module.exports = require('@jianhe/configs/prettier/index.js');
 ```
 
 ## ESlint
@@ -49,19 +64,31 @@ npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-
 npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise @babel/eslint-parser @babel/core eslint-plugin-vue
 ```
 
-添加配置
+配置文件优先级v9
+
+1. `eslint.config.js`, `eslint.config.mjs`, `eslint.config.cjs`
+2. `eslint.config.ts`, `eslint.config.mts`, `eslint.config.cts`
+3. `.eslintrc.js`, `.eslintrc.mjs`, `.eslintrc.cjs`
 
 ```js
 module.exports = {
-  // HTML
-  extends: ['@jianhe/config/eslint/html.js']
-
-  // Vue2
-  extends: ['@jianhe/config/eslint/vue2.js']
-
-  // Vue3
-  extends: ['@jianhe/config/eslint/vue3.js']
+  extends: ['@jianhe/configs/eslint/html|vue2|vu3.js']
 };
+```
+
+以下配置已经被弃用
+
+4. `.eslintrc.js`, `.eslintrc.cjs`
+5. `.eslintrc.yaml`, `.eslintrc.yml`
+6. `.eslintrc.json`
+7. `package.json` 的 `eslintConfig` 字段
+
+```json
+{
+  "eslintConfig": {
+    "extends": ["@jianhe/configs/eslint/html|vue2|vu3.js"]
+  }
+}
 ```
 
 ## StyleLint
@@ -76,14 +103,28 @@ npm install stylelint stylelint-config-html postcss-html stylelint-config-recess
 npm install stylelint stylelint-config-html postcss-html stylelint-config-recess-order stylelint-config-standard-scss
 ```
 
-添加配置
+配置文件优先级
+
+1. `stylelint.config.js`, `stylelint.config.mjs`, `stylelint.config.cjs`
 
 ```js
 module.exports = {
-  // CSS
-  extends: ['@jianhe/config/stylelint/css.js']
-
-  // SCSS
-  extends: ['@jianhe/config/stylelint/scss.js']
+  extends: ['@jianhe/configs/stylelint/css|scss.js']
 };
+```
+
+以下配置可能会被弃用
+
+2. `.stylelintrc.js`, `.stylelintrc.mjs`, `.stylelintrc.cjs`
+3. `.stylelintrc`
+4. `.stylelintrc.yml`, `.stylelintrc.yaml`
+5. `.stylelintrc.json`
+6. `package.json` 的 `stylelint` 字段
+
+```json
+{
+  "stylelint": {
+    "extends": ["@jianhe/configs/stylelint/css|scss.js"]
+  }
+}
 ```

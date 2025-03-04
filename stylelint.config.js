@@ -1,4 +1,4 @@
-// StyleLint Config
+// Stylelint Config
 // --------------------------
 
 module.exports = {

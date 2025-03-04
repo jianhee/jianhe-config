@@ -6,7 +6,7 @@
     d="4"
   >
     {{ a === 1 ? `a${1}` : '' }}
-    <todo-item>123</todo-item>
+    <TodoItem>123</TodoItem>
   </div>
 </template>
 

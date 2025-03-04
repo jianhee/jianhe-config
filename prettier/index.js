@@ -9,6 +9,8 @@
  */
 
 module.exports = {
+  // 关联 JSON Schema 定义，提供智能提示和验证
+  $schema: 'https://json.schemastore.org/prettierrc',
   // 每行最大字符数
   printWidth: Infinity,
   // 制表符宽度

@@ -15,6 +15,6 @@ module.exports = {
     // 2.扩展 recommended-scss 规则
     'stylelint-config-standard-scss',
     // 本地配置
-    './_base.js'
+    './css.js'
   ]
 };

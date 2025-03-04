@@ -3,7 +3,7 @@
 
 {
   // 是否在保存时格式化
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   // 是否在保存时修复错误
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",

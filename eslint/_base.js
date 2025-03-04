@@ -95,7 +95,7 @@ module.exports = {
     // 对象属性的引号：如果有一个属性需要使用引号，那就全部都使用引号
     'quote-props': ['error', 'consistent-as-needed'],
     // 函数左括号之前的空格：禁止使用
-    'space-before-function-paren': ['error', 'never'],
+    'space-before-function-paren': ['error', { anonymous: 'always', named: 'never', asyncArrow: 'always' }],
     // 语句末尾的分号：必须使用
     'semi': ['error', 'always'],
     // 换行风格
