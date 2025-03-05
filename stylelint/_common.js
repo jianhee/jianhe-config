@@ -37,10 +37,5 @@ module.exports = {
     'font-family-no-missing-generic-family-keyword': null,
     // 是否允许特异性较低的选择器在特异性较高的选择器之后出现：不校验
     'no-descending-specificity': null
-  },
-
-  // 启用缓存
-  cache: true,
-  // 禁用报告无效的禁用
-  reportInvalidScopeDisables: true
+  }
 };

@@ -1,8 +1,0 @@
-{
-  "name": "eslint-config-jianhe",
-  "version": "1.0.0",
-  "main": "index.js",
-  "peerDependencies": {
-    "prettier": "^3.5.3"
-  }
-}

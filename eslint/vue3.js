@@ -10,6 +10,6 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     // 本地配置
     require.resolve('./_common'),
-    require.resolve('./_vue')
+    require.resolve('./vue')
   ]
 };

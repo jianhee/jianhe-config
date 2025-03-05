@@ -2,5 +2,5 @@
 // --------------------------
 
 module.exports = {
-  extends: [require.resolve('./stylelint-config-jianhe/lib/scss')]
+  extends: [require.resolve('./stylelint/scss')]
 };
