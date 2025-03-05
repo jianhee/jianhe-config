@@ -2,17 +2,17 @@
 
 ## 安装
 
-在当前仓库根目录下运行，创建全局软链
+在当前仓库根目录下运行
 
 ```shell
 npm i -g yalc
 yalc publish --push
 ```
 
-在目标项目根目录下运行，通过全局软链获取到自定义配置
+在项目仓库根目录下运行
 
 ```shell
-yalc add @jianhe/configs
+yalc add @jianhe/linter-configs
 ```
 
 ## VS Code
@@ -37,7 +37,7 @@ npm install -D prettier
 
 ```json
 {
-  "prettier": "@jianhe/configs/prettier/index.js"
+  "prettier": "@jianhe/linter-configs/prettier"
 }
 ```
 
@@ -49,7 +49,7 @@ npm install -D prettier
 7. `.prettierrc.toml`
 
 ```js
-module.exports = require('@jianhe/configs/prettier/index.js');
+module.exports = require('@jianhe/linter-configs/prettier');
 ```
 
 ## ESlint
@@ -70,7 +70,7 @@ npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-
 
 ```js
 module.exports = {
-  extends: ['./node_moules/@jianhe/configs/eslint/html|vue2|vue3.js']
+  extends: ['./node_moules/@jianhe/linter-configs/eslint/es6|html|vue2|vue3']
 };
 ```
 
@@ -82,7 +82,7 @@ module.exports = {
 ```json
 {
   "eslintConfig": {
-    "extends": ["./node_moules/@jianhe/configs/eslint/html|vue2|vue3.js"]
+    "extends": ["./node_moules/@jianhe/linter-configs/eslint/es6|html|vue2|vue3"]
   }
 }
 ```
@@ -105,9 +105,7 @@ npm install stylelint stylelint-config-html postcss-html stylelint-config-recess
 
 ```js
 module.exports = {
-  extends: ['@jianhe/configs/stylelint/css|scss.js'],
-  // 或者
-  extends: ['./node_moules/@jianhe/configs/stylelint/css|scss.js']
+  extends: ['@jianhe/linter-configs/stylelint/css|scss']
 };
 ```
 
@@ -122,9 +120,7 @@ module.exports = {
 ```json
 {
   "stylelint": {
-    "extends": ["@jianhe/configs/stylelint/css|scss.js"],
-    // 或者
-    "extends": ["./node_moules/@jianhe/configs/stylelint/css|scss.js"]
+    "extends": ["@jianhe/linter-configs/stylelint/css|scss"]
   }
 }
 ```
