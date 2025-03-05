@@ -1,0 +1,19 @@
+{
+  "name": "eslint-config-jianhe",
+  "version": "1.0.0",
+  "exports": {
+    "./html": "./lib/html.js",
+    "./vue2": "./lib/vue2.js",
+    "./vue3": "./lib/vue3.js"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/eslint-parser": "^7.26.8",
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-vue": "^9.32.0"
+  }
+}

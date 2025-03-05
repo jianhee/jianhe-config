@@ -2,5 +2,5 @@
 // --------------------------
 
 module.exports = {
-  extends: ['./eslint/vue2.js']
+  extends: [require.resolve('./eslint-config-jianhe/lib/vue2.js')]
 };

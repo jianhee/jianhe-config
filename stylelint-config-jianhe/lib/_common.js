@@ -5,9 +5,6 @@
  * 安装 StyleLint
  * npm install -D stylelint
  *
- * 安装 Standard 配置
- * npm install -D stylelint-config-standard
- *
  * 安装 HTML 插件
  * npm install -D stylelint-config-html postcss-html
  *
@@ -16,7 +13,6 @@
  *
  * 文档
  * https://stylelint.io/
- * https://www.npmjs.com/package/stylelint-config-standard
  * https://www.npmjs.com/package/stylelint-config-html
  * https://www.npmjs.com/package/stylelint-config-recess-order
  */
@@ -30,9 +26,7 @@ module.exports = {
     // HTML 插件：它可以从 .html/.xml/.vue/.svelte/.php 等文件的 <style> 标签中提取代码
     'stylelint-config-html',
     // 排序插件：它在 stylelint-order 的基础上使用 Recess 和 Bootstrap 的规则给属性排序
-    'stylelint-config-recess-order',
-    // Standard 配置
-    'stylelint-config-standard'
+    'stylelint-config-recess-order'
   ],
 
   // 规则
@@ -43,5 +37,10 @@ module.exports = {
     'font-family-no-missing-generic-family-keyword': null,
     // 是否允许特异性较低的选择器在特异性较高的选择器之后出现：不校验
     'no-descending-specificity': null
-  }
+  },
+
+  // 启用缓存
+  cache: true,
+  // 禁用报告无效的禁用
+  reportInvalidScopeDisables: true
 };

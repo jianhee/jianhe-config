@@ -20,5 +20,5 @@ module.exports = {
   parser: '@babel/eslint-parser',
 
   // 可共享配置
-  extends: ['./_base.js']
+  extends: [require.resolve('./base')]
 };

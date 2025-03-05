@@ -37,7 +37,7 @@ npm install -D prettier
 
 ```json
 {
-  "prettier": "./node_moules/@jianhe/configs/prettier/index.js"
+  "prettier": "@jianhe/configs/prettier/index.js"
 }
 ```
 
@@ -49,7 +49,7 @@ npm install -D prettier
 7. `.prettierrc.toml`
 
 ```js
-module.exports = require('./node_moules/@jianhe/configs/prettier/index.js');
+module.exports = require('@jianhe/configs/prettier/index.js');
 ```
 
 ## ESlint
@@ -105,6 +105,8 @@ npm install stylelint stylelint-config-html postcss-html stylelint-config-recess
 
 ```js
 module.exports = {
+  extends: ['@jianhe/configs/stylelint/css|scss.js'],
+  // 或者
   extends: ['./node_moules/@jianhe/configs/stylelint/css|scss.js']
 };
 ```
@@ -120,6 +122,8 @@ module.exports = {
 ```json
 {
   "stylelint": {
+    "extends": ["@jianhe/configs/stylelint/css|scss.js"],
+    // 或者
     "extends": ["./node_moules/@jianhe/configs/stylelint/css|scss.js"]
   }
 }
