@@ -57,11 +57,14 @@ module.exports = require('@jianhe/linter-configs/prettier');
 安装依赖
 
 ```shell
-# ES6 + Standard + Babel + HTML
-npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise @babel/eslint-parser @babel/core eslint-plugin-html
+# 必需：ES6 + Standard + Babel
+npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise @babel/eslint-parser @babel/core
 
-# ES6 + Standard + Babel + Vue2/Vue3
-npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise @babel/eslint-parser @babel/core eslint-plugin-vue
+# 可选：使用 HTML
+npm install -D eslint-plugin-html
+
+# 可选：使用 Vue2/Vue3
+npm install -D eslint-plugin-vue
 ```
 
 配置文件优先级
@@ -92,11 +95,14 @@ module.exports = {
 安装依赖
 
 ```shell
-# CSS + HTML/Vue + Order + Standard
-npm install stylelint stylelint-config-html postcss-html stylelint-config-recess-order stylelint-config-standard
+# 必需：HTML/Vue + Order + Standard
+npm install stylelint stylelint-config-html postcss-html stylelint-config-recess-order
 
-# SCSS + HTML/Vue + Order + Standard
-npm install stylelint stylelint-config-html postcss-html stylelint-config-recess-order stylelint-config-standard-scss
+# 可选：使用 CSS
+npm install stylelint-config-standard
+
+# 可选：使用 SCSS
+npm install stylelint-config-standard-scss
 ```
 
 配置文件优先级
