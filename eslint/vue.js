@@ -41,6 +41,8 @@ module.exports = {
     'vue/prefer-template': 'error',
     // HTML 元素中的内容是否换行：多行时换行，单行时关闭校验
     'vue/multiline-html-element-content-newline': 'error',
-    'vue/singleline-html-element-content-newline': 'off'
+    'vue/singleline-html-element-content-newline': 'off',
+    // HTML 闭合元素
+    'vue/html-self-closing': ['error', { html: { void: 'always' } }]
   }
 };
