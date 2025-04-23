@@ -30,6 +30,6 @@
     "extends": "./eslint/vue3"
   },
   "stylelint": {
-    "extends": "./stylelint/scss"
+    "extends": "./stylelint/html-scss"
   }
 }
