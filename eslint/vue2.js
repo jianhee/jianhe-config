@@ -9,7 +9,7 @@ module.exports = {
     // Vue 插件提供的配置
     'plugin:vue/recommended',
     // 本地配置
-    require.resolve('./_common'),
-    require.resolve('./vue')
+    require.resolve('./modules/common'),
+    require.resolve('./modules/vue')
   ]
 };

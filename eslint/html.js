@@ -21,5 +21,5 @@ module.exports = {
   plugins: ['html'],
 
   // 可共享配置
-  extends: [require.resolve('./_common')]
+  extends: [require.resolve('./modules/common')]
 };

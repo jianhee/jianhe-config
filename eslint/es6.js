@@ -13,5 +13,5 @@ module.exports = {
   parser: '@babel/eslint-parser',
 
   // 可共享配置
-  extends: [require.resolve('./_common')]
+  extends: [require.resolve('./modules/common')]
 };

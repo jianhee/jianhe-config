@@ -14,6 +14,6 @@ module.exports = {
     // Standard 配置
     'stylelint-config-standard',
     // 本地配置
-    require.resolve('./_common')
+    require.resolve('./modules/common')
   ]
 };
