@@ -12,7 +12,7 @@ yalc publish --push
 在项目仓库根目录下运行
 
 ```shell
-yalc add @jianhe/linter-configs
+yalc add linter-configs
 ```
 
 ## VS Code
@@ -37,7 +37,7 @@ npm install -D prettier
 
 ```json
 {
-  "prettier": "@jianhe/linter-configs/prettier"
+  "prettier": "linter-configs/prettier"
 }
 ```
 
@@ -49,7 +49,7 @@ npm install -D prettier
 7. `.prettierrc.toml`
 
 ```js
-module.exports = require('@jianhe/linter-configs/prettier');
+module.exports = require('linter-configs/prettier');
 ```
 
 ## ESlint
@@ -57,8 +57,8 @@ module.exports = require('@jianhe/linter-configs/prettier');
 安装依赖
 
 ```shell
-# 必需：ES6 + Standard + Babel
-npm install -D eslint eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise @babel/eslint-parser @babel/core
+# 必需：ES6 + Babel + Standard
+npm install -D eslint @babel/core @babel/eslint-parser eslint-config-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-n
 
 # 可选：使用 HTML
 npm install -D eslint-plugin-html
@@ -73,7 +73,7 @@ npm install -D eslint-plugin-vue
 
 ```js
 module.exports = {
-  extends: ['./node_moules/@jianhe/linter-configs/eslint/es6|html|vue2|vue3']
+  extends: ['./node_moules/linter-configs/eslint/es6|html|vue2|vue3']
 };
 ```
 
@@ -85,7 +85,7 @@ module.exports = {
 ```json
 {
   "eslintConfig": {
-    "extends": ["./node_moules/@jianhe/linter-configs/eslint/es6|html|vue2|vue3"]
+    "extends": ["./node_moules/linter-configs/eslint/es6|html|vue2|vue3"]
   }
 }
 ```
@@ -95,14 +95,15 @@ module.exports = {
 安装依赖
 
 ```shell
-# 必需：HTML/Vue + Order + Standard
-npm install stylelint stylelint-config-html postcss-html stylelint-config-recess-order
+# 必需：Recess Order
+npm install -D stylelint stylelint-config-recess-order
 
-# 可选：使用 CSS
-npm install stylelint-config-standard
+# 必须：使用 CSS 或 SCSS 二选一
+npm install -D stylelint-config-standard
+npm install -D stylelint-config-standard-scss
 
-# 可选：使用 SCSS
-npm install stylelint-config-standard-scss
+# 可选：使用 HTML/Vue
+npm install -D postcss-html stylelint-config-html
 ```
 
 配置文件优先级
@@ -111,7 +112,7 @@ npm install stylelint-config-standard-scss
 
 ```js
 module.exports = {
-  extends: ['@jianhe/linter-configs/stylelint/css|scss']
+  extends: ['linter-configs/stylelint/css|scss']
 };
 ```
 
@@ -126,7 +127,7 @@ module.exports = {
 ```json
 {
   "stylelint": {
-    "extends": ["@jianhe/linter-configs/stylelint/css|scss"]
+    "extends": ["linter-configs/stylelint/css|scss|html-css|html-scss"]
   }
 }
 ```

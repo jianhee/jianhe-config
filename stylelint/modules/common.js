@@ -1,33 +1,14 @@
-/**
- * StyleLint Config
- * 其它所有配置都需要引用的基础配置，和 ESLint 类似
- *
- * 安装 StyleLint
- * npm install -D stylelint
- *
- * 安装 HTML 插件
- * npm install -D stylelint-config-html postcss-html
- *
- * 安装排序插件
- * npm install -D stylelint-config-recess-order
- *
- * 文档
- * https://stylelint.io/
- * https://www.npmjs.com/package/stylelint-config-html
- * https://www.npmjs.com/package/stylelint-config-recess-order
- */
+// StyleLint 基础配置
+// 文档：https://stylelint.io/
+// 安装：npm install -D stylelint
+// 说明：和 ESLint 规则类似
 
 module.exports = {
   // 插件
   plugins: [],
 
   // 可共享配置
-  extends: [
-    // HTML 插件：它可以从 .html/.xml/.vue/.svelte/.php 等文件的 <style> 标签中提取代码
-    'stylelint-config-html',
-    // 排序插件：它在 stylelint-order 的基础上使用 Recess 和 Bootstrap 的规则给属性排序
-    'stylelint-config-recess-order'
-  ],
+  extends: [],
 
   // 规则
   rules: {

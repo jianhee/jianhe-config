@@ -1,17 +1,6 @@
-/**
- * ESLint Config
- * 其它所有配置都需要引用的基础配置
- *
- * 安装 ESLint
- * npm install -D eslint
- *
- * 安装 Standard 配置
- * npm install -D eslint-config-standard eslint-plugin-import eslint-plugin-n eslint-plugin-promise
- *
- * 文档
- * https://eslint.org/
- * https://www.npmjs.com/package/eslint-config-standard
- */
+// ESLint 基础配置
+// 文档：https://eslint.org/
+// 安装：npm install -D eslint
 
 module.exports = {
   // 是否是顶级目录
@@ -40,26 +29,27 @@ module.exports = {
   },
 
   // 可共享配置
-  // 默认为空，添加可共享配置可以继承另一个配置文件的所有特征（包括规则、插件和语言选项）并修改所有选项
-  // 可选的值有以下三种，数组中后一项的优先级大于前一项，后一项的规则会覆盖前一项
+  // 添加可共享配置可以继承另一个配置文件的所有特征（包括规则、插件和语言选项）并修改所有选项
+  // 默认为空，可选的值有以下三种，数组中后一项的优先级大于前一项，后一项的规则会覆盖前一项
+  // 1.官方配置的名称：'recommended'（推荐规则）'all'（全部规则）
+  // 2.第三方配置的名称：'standard' 等
+  // 3.本地配置文件的路径：'./common.js' 等
   extends: [
-    // 1.官方配置的名称：可选的值有 1.'recommended'（推荐规则）2.'all'（全部规则）
-    'eslint:recommended',
-    // 2.第三方配置的名称
-    'standard'
-    // 3.本地配置文件的路径
-    // './_base.js'
+    'eslint:recommended'
+    // 'standard',
+    // './common.js'
   ],
 
   // 解析器
-  // 默认为 'Espree'，添加第三方解析器可以解析特定的语法，同时需要配置 `parserOptions` 字段
+  // 添加第三方解析器可以解析特定的语法
+  // 默认为 'Espree'，设置后需要同时配置 `parserOptions` 字段
   parser: '',
 
   // 解析器选项
   parserOptions: {
     // ECMAScript 版本：默认为 '3,5'，可设置为一个版本或一个年份
     ecmaVersion: 'latest',
-    // ECMAScript 模式：可选的值有 1.'script'（默认）2.'module'（如果代码是 ECMAScript 模块）
+    // ECMAScript 模式：默认为 'script'，可设置为 'module'（如果代码是 ECMAScript 模块）
     sourceType: 'module',
     // 额外的语言特性：默认都是关闭的
     ecmaFeatures: {
@@ -77,8 +67,8 @@ module.exports = {
   },
 
   // 插件
-  // 默认为空，只能检测 .js 文件中的代码
   // 添加第三方插件可以提供额外的环境、配置和规则，或者提供额外的处理器从特定的文件中提取或转换 JavaScript 代码
+  // 默认为空，只能检测 .js 文件中的代码
   plugins: [
     // html
     // vue

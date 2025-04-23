@@ -1,12 +1,6 @@
-/**
- * Prettier Config
- *
- * 安装 Prettier
- * npm install -D prettier
- *
- * 文档
- * https://prettier.io/
- */
+// Prettier Config
+// 文档：https://prettier.io/
+// 安装：npm install -D prettier
 
 module.exports = {
   // 关联 JSON Schema 定义，提供智能提示和验证

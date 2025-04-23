@@ -1,15 +1,11 @@
-/**
- * ESLint Config For Vue2
- *
- */
+// ESLint Config For ES6 + Vue2
 
 module.exports = {
-  // 可共享配置
   extends: [
-    // Vue 插件提供的配置
+    // ...
+    require.resolve('./modules/extends-standard'),
     'plugin:vue/recommended',
-    // 本地配置
-    require.resolve('./modules/common'),
-    require.resolve('./modules/vue')
+    require.resolve('./modules/plugins-vue'),
+    require.resolve('./modules/common')
   ]
 };

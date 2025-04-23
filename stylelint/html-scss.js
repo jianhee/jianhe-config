@@ -1,11 +1,11 @@
-// ESLint Config For ES6 + Vue3
+// StyleLint Config For CSS + HTML/Vue
 
 module.exports = {
   extends: [
     // ...
     require.resolve('./modules/extends-standard'),
-    'plugin:vue/vue3-recommended',
-    require.resolve('./modules/plugins-vue'),
+    require.resolve('./modules/extends-recess-order'),
+    require.resolve('./modules/extends-html'),
     require.resolve('./modules/common')
   ]
 };

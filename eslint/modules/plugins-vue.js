@@ -1,21 +1,13 @@
-/**
- * ESLint Config For ES6 + Vue
- *
- * 安装 Babel 解析器
- * npm install -D @babel/core @babel/eslint-parser
- *
- * 安装 Vue 插件
- * npm install -D eslint-plugin-vue
- *
- * 文档
- * https://www.npmjs.com/package/@babel/eslint-parser
- * https://eslint.vuejs.org/
- */
+// Vue 插件
+// 文档：https://eslint.vuejs.org/
+// 安装：npm install -D eslint-plugin-vue
+// 1.用于解析 .vue 文件的 <script> 和 <template> 标签中的代码
+// 2.提供针对 Vue 语法的 `vue-eslint-parser` 解析器
+// 3.提供针对 Vue 语法的的规则
 
 module.exports = {
-  // Vue 插件提供的解析器
-  // 1.Vue 插件使用 `vue-eslint-parser` 解析器检查模板
-  // 2.如果在 `parser` 字段中使用了其它解析器，需要移入 `parserOptions` 字段中以避免两个解析器产生冲突
+  // Vue 解析器
+  // 如果在 `parser` 字段中使用了其它解析器，需要移入 `parserOptions` 字段中以避免两个解析器产生冲突
   parser: 'vue-eslint-parser',
 
   // Babel 解析器移入这里
@@ -24,11 +16,10 @@ module.exports = {
   },
 
   // Vue 插件
-  // 1.它可以从 .vue 文件的 <script> 标签和 <template> 标签中提取代码，并针对 Vue 语法提供了更多的规则
-  // 2.它和 HTML 插件都会从 <script> 标签中提取代码，所以需要在 `plugins` 字段中移除 'html' 以避免两个插件产生冲突
+  // 它和 HTML 插件都会从 <script> 标签中提取代码，所以需要在 `plugins` 字段中移除 'html' 以避免两个插件产生冲突
   plugins: ['vue'],
 
-  // Vue 插件提供的规则
+  // Vue 规则
   rules: {
     // 目录和文件名：必须使用 kebab-case 写法
     // 组件的命名：必须使用两个以上的单词

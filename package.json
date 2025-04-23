@@ -1,6 +1,6 @@
 {
-  "name": "@jianhe/linter-configs",
-  "description": "My Linter Configs",
+  "name": "linter-configs",
+  "description": "Linter Configs",
   "version": "1.0.0",
   "author": "jianhe",
   "license": "ISC",
