@@ -3,8 +3,8 @@
 module.exports = {
   extends: [
     // ...
-    require.resolve('./modules/extends-standard'),
     'plugin:vue/recommended',
+    require.resolve('./modules/extends-standard'),
     require.resolve('./modules/plugins-vue'),
     require.resolve('./modules/common')
   ]
