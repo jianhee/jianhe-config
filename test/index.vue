@@ -5,55 +5,43 @@
     c="3"
     d="4"
   >
-    {{ a === 1 ? `a${1}` : '' }}
+    {{ var1 }}
+    {{ var2 === 1 ? `a${1}` : '' }}
     <TodoItem>123</TodoItem>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, computed, onMounted } from 'vue';
 import TodoItem from './TodoItem';
-export default {
-  name: 'TestIndex',
-  components: {
-    TodoItem
-  },
-  data() {
-    return {
-      bar1: undefined,
-      bar2: undefined,
-      bar3: {
-        a: 1,
-        b: 1
-      },
-      bar4: {
-        'a': 1,
-        'a-1': 1
-      }
-    };
-  },
-  computed: {
-    foo() {
-      return 1;
-    }
-  },
-  created() {
-    const a = `a${1}`;
-    if (a === 1) {
-      console.log(a);
-    }
-  },
-  mounted() {
-    document.addEventListener('onscroll', event => {});
-  },
-  methods: {
-    fn(a) {
-      switch (a) {
-        case 1:
-          break;
-        case 2:
-          break;
-      }
-    }
+
+// 变量
+const var1 = ref(1);
+const var2 = ref({ a: 1, b: 1 });
+
+// 计算属性
+const foo = computed(() => {
+  return 1;
+});
+
+// 生命周期
+onMounted(() => {
+  document.addEventListener('onscroll', event => {});
+});
+
+// 方法
+const fn1 = () => {
+  const a = `a${1}`;
+  if (a === 1) {
+    console.log(a);
+  }
+};
+const fn2 = a => {
+  switch (a) {
+    case 1:
+      break;
+    case 2:
+      break;
   }
 };
 </script>
