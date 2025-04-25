@@ -19,6 +19,14 @@ module.exports = {
   // 它和 HTML 插件都会从 <script> 标签中提取代码，所以需要在 `plugins` 字段中移除 'html' 以避免两个插件产生冲突
   plugins: ['vue'],
 
+  // Vue 推荐规则
+  extends: [
+    // Vue2
+    // 'plugin:vue/recommended',
+    // Vue3
+    // 'plugin:vue/vue3-recommended'
+  ],
+
   // Vue 规则
   rules: {
     // 目录和文件名：必须使用 kebab-case 写法

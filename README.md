@@ -91,7 +91,7 @@ module.exports = {
 1. `css.js` = `StyleLint` + `Recess Order` + `Standard`
 2. `scss.js` = `StyleLint` + `Recess Order` + `Standard Scss`
 3. `html-css.js` = `StyleLint` + `Recess Order` + `Standard` + `HTML`
-4. `html-scss.js` = `StyleLint` + `Recess Order` + `Standard` + `HTML`
+4. `html-scss.js` = `StyleLint` + `Recess Order` + `Standard Scss` + `HTML`
 
 配置文件优先级
 
